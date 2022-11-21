@@ -334,7 +334,7 @@ controllerInitTasks:
       - tagKey: "@[ADWRKSHP_IBL_LICENSE_RULE_NBR_ENTR]"
         tagValue: "0"
       - tagKey: "@[ADWRKSHP_IBL_LICENSE_RULE_NBR_PREM]"
-        tagValue: "50"
+        tagValue: "100"
         
 
 # !!! The license rule creation task should be the very first controller init task
