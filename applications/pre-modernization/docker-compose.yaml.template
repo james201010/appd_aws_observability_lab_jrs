@@ -11,7 +11,7 @@ services:
 
   machine-agent:
     container_name: machine-agent
-    image: appdynamics/machine-agent-analytics:latest  
+    image: appdynamics/machine-agent-analytics:21.12.5  
     restart: always
     env_file: application.env
     environment:
