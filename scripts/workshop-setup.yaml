@@ -651,7 +651,7 @@ cloudTasks:
         tagValue: "Welcome1!"    
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
         tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"    
-      - tagKey: "@[ADWRKSHP_CLOUD_SECURITY_GROUP_ID]"
+      - tagKey: "@[ADWRKSHP_CLOUD_SECURITY_GROUP_NAME]"
         tagValue: "@[ADWRKSHP_LABUSER_KEY]-admod-workshop-sg"    
       - tagKey: "@[ADWRKSHP_CLOUD_SEC_GROUP_CIDR_1]"
         tagValue: "localprivip.txt"
