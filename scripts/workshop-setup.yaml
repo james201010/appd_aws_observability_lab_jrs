@@ -65,9 +65,9 @@ shellTasks:
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_FILEPATH]"
         tagValue: "/opt/appdynamics/workshopuser/workshopPrereqs.sh"
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_BEGIN_MSG]"
-        tagValue: " - Starting rewrite of partition table : install of kubectl, eksctl, and docker-compose"
+        tagValue: " - Starting install of kubectl, eksctl, and docker-compose"
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_END_MSG]"
-        tagValue: " - Finished rewrite of partition table : install of kubectl, eksctl, and docker-compose"
+        tagValue: " - Finished install of kubectl, eksctl, and docker-compose"
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_INHERIT_IO]"
         tagValue: "true"
 
