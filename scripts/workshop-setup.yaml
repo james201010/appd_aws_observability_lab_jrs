@@ -323,7 +323,7 @@ templates:
         tagValue: "@[ADWRKSHP_LABUSER_KEY]"
         
  
-   - templateName: "pre-modernize-app-conf-examp"
+  - templateName: "pre-modernize-app-conf-examp"
     sourceFile: "./applications/pre-modernization/application.env.template"
     destinationFile: "./applications/pre-modernization/application.env"
     tags:
