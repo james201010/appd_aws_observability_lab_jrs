@@ -12,9 +12,9 @@ Password: ${ADWRKSHP_LABUSER_PWD}
 
 ------------------------------------------------------------------------------------------------------------------
 
-Pre-Migration APM Application Name: ${ADWRKSHP_APM_APP_NAME_PRE}
-Pre-Migration EUM Application Name: ${ADWRKSHP_EUM_APP_NAME_PRE}
+Pre-Modernization APM Application Name: ${ADWRKSHP_APM_APP_NAME_PRE}
+Pre-Modernization EUM Application Name: ${ADWRKSHP_EUM_APP_NAME_PRE}
 
-Post-Migration APM Application Name: ${ADWRKSHP_APM_APP_NAME_POST}
-Post-Migration EUM Application Name: ${ADWRKSHP_EUM_APP_NAME_POST}
+Post-Modernization APM Application Name: ${ADWRKSHP_APM_APP_NAME_POST}
+Post-Modernization EUM Application Name: ${ADWRKSHP_EUM_APP_NAME_POST}
 
