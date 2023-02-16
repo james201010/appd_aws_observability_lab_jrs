@@ -15,14 +15,14 @@ https://appd-modernization.awsworkshop.io/30_workshop_setup/3_attach_iam_role.ht
 https://appd-modernization.awsworkshop.io/30_workshop_setup/4_cloud9_update.html
 
 
-Then use the commands below to finish setting up the pre-moderization version of the lab:
+Then use the commands below to finish setting up the pre-modernization version of the lab:
 
 ```
-git clone https://github.com/Appdynamics/appd_aws_observability_lab.git moderization_workshop
+git clone https://github.com/Appdynamics/appd_aws_observability_lab.git modernization_workshop
 ```
 
 ```
-cd moderization_workshop
+cd modernization_workshop
 ```
 
 ```
@@ -34,7 +34,7 @@ Set lab user id to at least 5 character name
 export appd_workshop_user=xxxxx
 ```
 
-OPTIONAL: If you want to target your own controller then edit the '/home/ec2-user/environment/moderization_workshop/controller-config.yaml' file with your controller details and the user and password for a controller user that has 'Account Owner' role assigned.  Then set the variable that points to the 'controller-config.yaml' file like this
+OPTIONAL: If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user and password for a controller user that has 'Account Owner' role assigned.  Then set the variable that points to the 'controller-config.yaml' file like this
 
 ```
 export appd_controller_details_file_path=./controller-config.yaml
@@ -52,23 +52,23 @@ Once the initial setup has completed, then next step is to create the EKS cluste
 Note: The EKS cluster creation takes about 15 minutes to complete
 
 ```
-/home/ec2-user/environment/moderization_workshop
+/home/ec2-user/environment/modernization_workshop
 
 ./create_eks_cluster.sh
 ```
 
-Once the EKS cluster creation has completed, then next step is to deploy the 'post-moderization' application the EKS cluster with the commands below:
+Once the EKS cluster creation has completed, then next step is to deploy the 'post-modernization' application the EKS cluster with the commands below:
 
 ```
-/home/ec2-user/environment/moderization_workshop
+/home/ec2-user/environment/modernization_workshop
 
 ./deploy_eks_application.sh
 ```
 
-Once the 'post-moderization' application deployment has completed, then next step is to deploy the AppDynamics Agents with the commands below:
+Once the 'post-modernization' application deployment has completed, then next step is to deploy the AppDynamics Agents with the commands below:
 
 ```
-/home/ec2-user/environment/moderization_workshop
+/home/ec2-user/environment/modernization_workshop
 
 ./deploy_appdynamics_agents.sh
 ```
@@ -81,7 +81,7 @@ Now it's time to work through the observability sections of the workshop lab gui
 PLEASE! When you are finished with the workshop, kindly run the 'teardown_workshop.sh' script to delete all the resources in AWS and the AppDynamics Controller that were created during the workshop by using the commands below:
 
 ```
-/home/ec2-user/environment/moderization_workshop
+/home/ec2-user/environment/modernization_workshop
 
 ./teardown_workshop.sh
 ```
