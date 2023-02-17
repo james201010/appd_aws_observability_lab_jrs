@@ -2,7 +2,7 @@
 
 ##### Update RDS security group with EKS IPs
 
-appd_wrkshp_last_setupstep_done="160"
+appd_wrkshp_last_setupstep_done="140"
 
 java -DworkshopUtilsConf=./scripts/workshop-setup.yaml -DworkshopTeardownConf=./scripts/state/workshop-teardown.yaml -DworkshopAction=updatecloudsg -DlastSetupStepDone=${appd_wrkshp_last_setupstep_done} -DshowWorkshopBanner=false -jar ./AD-Workshop-Utils.jar
 
