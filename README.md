@@ -1,6 +1,6 @@
 # appd_aws_modernization_lab
 
-Artifacts for AppDynamics AWS Cloud Migration lab.
+Artifacts for AppDynamics AWS Cloud Modernization lab.
 
 After creating your Cloud9 instance and configuring it by following all the steps included in these web pages:
 
