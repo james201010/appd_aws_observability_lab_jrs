@@ -25,9 +25,6 @@ git clone https://github.com/Appdynamics/appd_aws_observability_lab.git moderniz
 cd modernization_workshop
 ```
 
-```
-chmod +x setup_workshop.sh
-```
 
 Set lab user id to at least 5 character name
 ```
@@ -52,7 +49,7 @@ Once the initial setup has completed, then next step is to create the EKS cluste
 Note: The EKS cluster creation takes about 15 minutes to complete
 
 ```
-/home/ec2-user/environment/modernization_workshop
+cd /home/ec2-user/environment/modernization_workshop
 
 ./create_eks_cluster.sh
 ```
@@ -60,7 +57,7 @@ Note: The EKS cluster creation takes about 15 minutes to complete
 Once the EKS cluster creation has completed, then next step is to deploy the 'post-modernization' application the EKS cluster with the commands below:
 
 ```
-/home/ec2-user/environment/modernization_workshop
+cd /home/ec2-user/environment/modernization_workshop
 
 ./deploy_eks_application.sh
 ```
@@ -68,7 +65,7 @@ Once the EKS cluster creation has completed, then next step is to deploy the 'po
 Once the 'post-modernization' application deployment has completed, then next step is to deploy the AppDynamics Agents with the commands below:
 
 ```
-/home/ec2-user/environment/modernization_workshop
+cd /home/ec2-user/environment/modernization_workshop
 
 ./deploy_appdynamics_agents.sh
 ```
@@ -81,7 +78,7 @@ Now it's time to work through the observability sections of the workshop lab gui
 PLEASE! When you are finished with the workshop, kindly run the 'teardown_workshop.sh' script to delete all the resources in AWS and the AppDynamics Controller that were created during the workshop by using the commands below:
 
 ```
-/home/ec2-user/environment/modernization_workshop
+cd /home/ec2-user/environment/modernization_workshop
 
 ./teardown_workshop.sh
 ```

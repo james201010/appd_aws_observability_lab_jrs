@@ -42,130 +42,130 @@ kubectl create -f ./per-loan-load-01.yaml
 
 # Wait 30 seconds : 30 secs
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .............................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............................................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..........................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .........................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........................................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......................................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ....................................................."
-sleep 3
+sleep 2
 # Wait 30 seconds : 1 min
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ...................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ................................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ................................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..............................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .............................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..........................................."
-sleep 3
+sleep 2
 # Wait 30 seconds : 1.5 mins
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .........................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ....................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ...................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .................................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ................................."
-sleep 3
+sleep 2
 # Wait 30 seconds : 2 mins
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ................................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..............................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .............................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..........................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .........................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......................."
-sleep 3
+sleep 2
 # Wait 30 seconds : 2.5 mins
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ....................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ...................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ................."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ................"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..............."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .............."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............."
-sleep 3
+sleep 2
 # Wait 30 seconds : 3 mins
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ............"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..........."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize .........."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ........"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ......"
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ....."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ...."
-sleep 3
+sleep 2
 echo "CloudWorkshop|INFO|     - Waiting for Application to Initialize ..."
-sleep 3
+sleep 2
 echo ""
 echo "##############################################################################################################################################################"
 echo " Finished Deploying Application to EKS"

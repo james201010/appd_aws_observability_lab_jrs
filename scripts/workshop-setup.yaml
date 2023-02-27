@@ -408,6 +408,57 @@ templates:
         tagValue: "@[ADWRKSHP_LABUSER_KEY]"    
 
 
+
+  - templateName: "kube-app-conf-example"
+    sourceFile: "./applications/post-modernization/config-map.yaml.template"
+    destinationFile: "./applications/post-modernization/application/config-map.yaml"
+    tags:
+      - tagKey: "${ADWRKSHP_RANDOM_UUID}"
+        tagValue: "@[ADWRKSHP_RANDOM_UUID]"
+
+      - tagKey: "${ADWRKSHP_CONTROLLER_HOST}"
+        tagValue: "@[ADWRKSHP_CONTROLLER_HOST]"
+        
+      - tagKey: "${ADWRKSHP_CONTROLLER_ACCT_NAME}"
+        tagValue: "@[ADWRKSHP_CONTROLLER_ACCT_NAME]"
+        
+      - tagKey: "${ADWRKSHP_APM_APP_NAME}"
+        tagValue: "@[ADWRKSHP_APM_APP_NAME_POST]"
+        
+      - tagKey: "${ADWRKSHP_ACCT_ACCESS_KEY}"
+        tagValue: "df4d049a-9f78-4e95-a8ad-9261a53a5954"
+        
+      - tagKey: "${ADWRKSHP_EUM_APP_NAME}"
+        tagValue: "@[ADWRKSHP_EUM_APP_NAME_POST]"
+        
+      - tagKey: "${ADWRKSHP_EUM_APP_KEY}"
+        tagValue: "@[ADWRKSHP_EUM_APP_KEY_POST]"
+        
+      - tagKey: "${ADWRKSHP_DB_AGENT_NAME}"
+        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        
+      - tagKey: "${ADWRKSHP_DB1_URL_PART}"
+        tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
+        
+      - tagKey: "${ADWRKSHP_CLOUD_REGION}"
+        tagValue: "@[ADWRKSHP_CLOUD_REGION]"
+
+      - tagKey: "${ADWRKSHP_CLOUD_MODE}"
+        tagValue: "@[ADWRKSHP_CLOUD_MODE]"
+        
+      - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_1}"
+        tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_1]"
+        
+      - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_2}"
+        tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_2]"
+        
+      - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_3}"
+        tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_3]"
+        
+      - tagKey: "${ADWRKSHP_LABUSER_KEY}"
+        tagValue: "@[ADWRKSHP_LABUSER_KEY]"    
+
+
   - templateName: "workshop-user-details"
     sourceFile: "./scripts/workshop-user-details.txt.template"
     destinationFile: "./workshop-user-details.txt"
@@ -549,6 +600,11 @@ controllerTasks:
           - tagKey: "${ADWRKSHP_APM_APP_NAME}"
             tagValue: "@[ADWRKSHP_APM_APP_NAME_POST]"
 
+      - templateName: "kube-app-conf-example"
+        targetTags:
+          - tagKey: "${ADWRKSHP_APM_APP_NAME}"
+            tagValue: "@[ADWRKSHP_APM_APP_NAME_POST]"
+
       - templateName: "cluster-agent-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_APM_APP_NAME}"
@@ -579,6 +635,13 @@ controllerTasks:
     templateTargets:
     
       - templateName: "kube-app-conf"
+        targetTags:
+          - tagKey: "${ADWRKSHP_EUM_APP_KEY}"
+            tagValue: "@[ADWRKSHP_EUM_APP_KEY_POST]"  
+          - tagKey: "${ADWRKSHP_EUM_APP_NAME}"
+            tagValue: "@[ADWRKSHP_EUM_APP_NAME_POST]"
+
+      - templateName: "kube-app-conf-example"
         targetTags:
           - tagKey: "${ADWRKSHP_EUM_APP_KEY}"
             tagValue: "@[ADWRKSHP_EUM_APP_KEY_POST]"  
@@ -615,11 +678,16 @@ controllerTasks:
         tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"    
 
     templateTargets:    
+
       - templateName: "kube-app-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_DB1_URL_PART}"
             tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
 
+      - templateName: "kube-app-conf-example"
+        targetTags:
+          - tagKey: "${ADWRKSHP_DB1_URL_PART}"
+            tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
 
   - taskType: "CONTROLLER_TASK_CREATE_DB_COLLECTOR"
     taskName: "adfin-db-collector-pre"
@@ -722,6 +790,19 @@ controllerTasks:
           - tagKey: "${ADWRKSHP_RANDOM_UUID}"
             tagValue: "@[ADWRKSHP_RANDOM_UUID]"    
 
+      - templateName: "kube-app-conf-example"
+        targetTags:
+          - tagKey: "${ADWRKSHP_CONTROLLER_HOST}"
+            tagValue: "@[ADWRKSHP_CONTROLLER_HOST]"    
+
+          - tagKey: "${ADWRKSHP_CONTROLLER_ACCT_NAME}"
+            tagValue: "@[ADWRKSHP_CONTROLLER_ACCT_NAME]"    
+
+          - tagKey: "${ADWRKSHP_LABUSER_KEY}"
+            tagValue: "@[ADWRKSHP_LABUSER_KEY]"    
+
+          - tagKey: "${ADWRKSHP_RANDOM_UUID}"
+            tagValue: "@[ADWRKSHP_RANDOM_UUID]"    
 
       - templateName: "cluster-agent-conf"
         targetTags:
@@ -892,24 +973,34 @@ cloudTasks:
     inputTags:
       - tagKey: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_1]"
         tagValue: "adfin-pm1-@[ADWRKSHP_LABUSER_KEY]-cashaccts"    
+    
     templateTargets:    
       - templateName: "kube-app-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_1}"
             tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_1]"
 
+      - templateName: "kube-app-conf-example"
+        targetTags:
+          - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_1}"
+            tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_1]"
 
   - taskType: "CLOUD_TASK_CREATE_STORAGE_AWS_S3_BUCKET"
     taskName: "create-storage-aws-s3-bucket-bizloans"
     inputTags:
       - tagKey: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_2]"
         tagValue: "adfin-pm2-@[ADWRKSHP_LABUSER_KEY]-bizloans"    
+    
     templateTargets:    
       - templateName: "kube-app-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_2}"
             tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_2]"
 
+      - templateName: "kube-app-conf-example"
+        targetTags:
+          - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_2}"
+            tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_2]"
 
   - taskType: "CLOUD_TASK_CREATE_STORAGE_AWS_S3_BUCKET"
     taskName: "create-storage-aws-s3-bucket-perloans"
@@ -923,6 +1014,10 @@ cloudTasks:
           - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_3}"
             tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_3]"
 
+      - templateName: "kube-app-conf-example"
+        targetTags:
+          - tagKey: "${ADWRKSHP_CLOUD_STORG_INST_3}"
+            tagValue: "@[ADWRKSHP_CLOUD_STORG_INST_NAME_3]"
 
 
 vaultInfo:

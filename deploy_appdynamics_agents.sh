@@ -32,4 +32,13 @@ else
 
 fi
 
-#rm -f ./applications/post-modernization/clusteragent/values-ca1.yaml
+mkdir ./applications/post-modernization/clusteragent/.env
+cp ./applications/post-modernization/clusteragent/values-ca1.yaml ./applications/post-modernization/clusteragent/.env/values-ca1.yaml
+
+rm -f ./applications/post-modernization/clusteragent/values-ca1.yaml
+cp ./applications/post-modernization/clusteragent/values-ca2.yaml.template ./applications/post-modernization/clusteragent/values-ca1.yaml
+
+sed -i 's|\@\[ADWRKSHP_ELV_LABUSER_KEY\]|adminuser|g' ./applications/post-modernization/clusteragent/values-ca1.yaml
+sed -i 's|\@\[ADWRKSHP_ELV_LABUSER_PWD\]|adminuserpass|g' ./applications/post-modernization/clusteragent/values-ca1.yaml
+sed -i 's|\@\[ADWRKSHP_ACCT_ACCESS_KEY\]|df4d049a-9f78-4e95-a8ad-9261a53a5954|g' ./applications/post-modernization/clusteragent/values-ca1.yaml
+sed -i 's/channel_9d8f15cf-0acf-4510-bf5b-7147aae4035c/channel_7y3d81dc-8fca-3274-gj7d-4629ssw2076p/g' ./applications/post-modernization/clusteragent/values-ca1.yaml
