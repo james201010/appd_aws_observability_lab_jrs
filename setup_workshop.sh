@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #
 # Utility script to initialize the workshop prerequisites on the Cloud9 EC2 instance
 #
@@ -15,6 +16,7 @@
 # NOTE: All inputs are defined by external environment variables.
 #       Optional variables have reasonable defaults, but you may override as needed.
 #---------------------------------------------------------------------------------------------------
+
 
 # [MANDATORY] workshop user identity.
 appd_workshop_user="${appd_workshop_user:-}"
