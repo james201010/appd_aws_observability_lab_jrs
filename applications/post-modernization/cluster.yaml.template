@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: AD-Fin-PostModernize-${ADWRKSHP_LABUSER_KEY}
+  name: AD-Fin-Post-Mod-${ADWRKSHP_LABUSER_KEY}
   region: ${ADWRKSHP_CLOUD_REGION}
   version: "1.24"
 

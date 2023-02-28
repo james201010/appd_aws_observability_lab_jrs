@@ -22,7 +22,7 @@ taskExecutionOrder:
   - taskType: "SHELL_TASK"
     taskName: "create-dbagent-srvc-sh"   
   - taskType: "SHELL_TASK"
-    taskName: "create-pre-modernize-srvc-sh"
+    taskName: "create-pre-mod-srvc-sh"
   - taskType: "SHELL_TASK"
     taskName: "get-ips-for-cloud-sg"
   - taskType: "SHELL_TASK"
@@ -35,7 +35,7 @@ taskExecutionOrder:
   - taskType: "CONTROLLER_TASKS"
     taskName: ""
   - taskType: "SHELL_TASK"
-    taskName: "start-pre-modernize-app"
+    taskName: "start-pre-mod-app"
 
 #  - taskType: "SHELL_TASK"
 #    taskName: "launch-sim-agent"
@@ -137,7 +137,7 @@ shellTasks:
       - tagKey: "@[ADWRKSHP_DB_AGENT_ZIP_URL]"
         tagValue: "https://download-files.appdynamics.com/download-file/db-agent/22.3.0.2742/db-agent-22.3.0.2742.zip"
       - tagKey: "@[ADWRKSHP_DB_AGENT_NAME]"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_BEGIN_MSG]"
         tagValue: " - Start deployment of database agent"
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_END_MSG]"
@@ -157,7 +157,7 @@ shellTasks:
         tagValue: "false"
 
   - taskType: "SHELL_TASK_EXECUTE_SHELL_SCRIPT"
-    taskName: "create-pre-modernize-srvc-sh"
+    taskName: "create-pre-mod-srvc-sh"
     inputTags:
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_FILEPATH]"
         tagValue: "./scripts/create_pre_app_srvc_sudo.sh"
@@ -207,7 +207,7 @@ shellTasks:
         
 
   - taskType: "SHELL_TASK_EXECUTE_SHELL_SCRIPT"
-    taskName: "start-pre-modernize-app"
+    taskName: "start-pre-mod-app"
     inputTags:
       - tagKey: "@[ADWRKSHP_SHELL_SCRIPT_FILEPATH]"
         tagValue: "./applications/pre-modernization/start_app.sh"
@@ -290,7 +290,7 @@ templates:
         tagValue: "@[ADWRKSHP_APM_APP_NAME_POST]"        
 
 
-  - templateName: "pre-modernize-app-conf"
+  - templateName: "pre-mod-app-conf"
     sourceFile: "./applications/pre-modernization/application.env.template"
     destinationFile: "./applications/pre-modernization/.env/application.env"
     tags:
@@ -313,13 +313,13 @@ templates:
         tagValue: "@[ADWRKSHP_EUM_APP_KEY_PRE]"
         
       - tagKey: "${ADWRKSHP_DB_AGENT_NAME}"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
         
       - tagKey: "${ADWRKSHP_LABUSER_KEY}"
         tagValue: "@[ADWRKSHP_LABUSER_KEY]"
         
  
-  - templateName: "pre-modernize-app-conf-examp"
+  - templateName: "pre-mod-app-conf-examp"
     sourceFile: "./applications/pre-modernization/application.env.template"
     destinationFile: "./applications/pre-modernization/application.env"
     tags:
@@ -342,7 +342,7 @@ templates:
         tagValue: "@[ADWRKSHP_EUM_APP_KEY_PRE]"
         
       - tagKey: "${ADWRKSHP_DB_AGENT_NAME}"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
         
       - tagKey: "${ADWRKSHP_LABUSER_KEY}"
         tagValue: "@[ADWRKSHP_LABUSER_KEY]"
@@ -384,7 +384,7 @@ templates:
         tagValue: "@[ADWRKSHP_EUM_APP_KEY_POST]"
         
       - tagKey: "${ADWRKSHP_DB_AGENT_NAME}"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
         
       - tagKey: "${ADWRKSHP_DB1_URL_PART}"
         tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
@@ -435,7 +435,7 @@ templates:
         tagValue: "@[ADWRKSHP_EUM_APP_KEY_POST]"
         
       - tagKey: "${ADWRKSHP_DB_AGENT_NAME}"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
         
       - tagKey: "${ADWRKSHP_DB1_URL_PART}"
         tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
@@ -495,7 +495,7 @@ controllerInitTasks:
 #    taskName: "create-license-rule"
 #    inputTags:
 #      - tagKey: "@[ADWRKSHP_LICENSE_RULE_NAME]"
-#        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-LicenseRule"
+#        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-LicenseRule"
 #      - tagKey: "@[ADWRKSHP_IBL_LICENSE_RULE_ACCT_ID]"
 #        tagValue: "23458"
 #        #tagValue: "817"
@@ -530,12 +530,12 @@ controllerTasks:
         tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"
         
     templateTargets:        
-      - templateName: "pre-modernize-app-conf"
+      - templateName: "pre-mod-app-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_APM_APP_NAME}"
             tagValue: "@[ADWRKSHP_APM_APP_NAME_PRE]"
 
-      - templateName: "pre-modernize-app-conf-examp"
+      - templateName: "pre-mod-app-conf-examp"
         targetTags:
           - tagKey: "${ADWRKSHP_APM_APP_NAME}"
             tagValue: "@[ADWRKSHP_APM_APP_NAME_PRE]"
@@ -563,14 +563,14 @@ controllerTasks:
         tagValue: "2600"
   
     templateTargets:
-      - templateName: "pre-modernize-app-conf"
+      - templateName: "pre-mod-app-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_EUM_APP_KEY}"
             tagValue: "@[ADWRKSHP_EUM_APP_KEY_PRE]"  
           - tagKey: "${ADWRKSHP_EUM_APP_NAME}"
             tagValue: "@[ADWRKSHP_EUM_APP_NAME_PRE]"
 
-      - templateName: "pre-modernize-app-conf-examp"
+      - templateName: "pre-mod-app-conf-examp"
         targetTags:
           - tagKey: "${ADWRKSHP_EUM_APP_KEY}"
             tagValue: "@[ADWRKSHP_EUM_APP_KEY_PRE]"  
@@ -667,7 +667,7 @@ controllerTasks:
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_TYPE]"
         tagValue: "MYSQL"    
       - tagKey: "@[ADWRKSHP_DB_AGENT_NAME]"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_PORT]"
         tagValue: "@[ADWRKSHP_CLOUD_DB_INST_PORT]"
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_USER]"
@@ -699,7 +699,7 @@ controllerTasks:
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_TYPE]"
         tagValue: "MYSQL"    
       - tagKey: "@[ADWRKSHP_DB_AGENT_NAME]"
-        tagValue: "adfin-modernize-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
+        tagValue: "adfin-mod-@[ADWRKSHP_LABUSER_KEY]-DBAgent"
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_PORT]"
         tagValue: "3306"
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_USER]"
@@ -745,7 +745,7 @@ controllerTasks:
         # 288654 = SecureApp View Only
 
     templateTargets:   
-      - templateName: "pre-modernize-app-conf"
+      - templateName: "pre-mod-app-conf"
         targetTags:
           - tagKey: "${ADWRKSHP_CONTROLLER_HOST}"
             tagValue: "@[ADWRKSHP_CONTROLLER_HOST]"    
@@ -759,7 +759,7 @@ controllerTasks:
           - tagKey: "${ADWRKSHP_LABUSER_KEY}"
             tagValue: "@[ADWRKSHP_LABUSER_KEY]"    
 
-      - templateName: "pre-modernize-app-conf-examp"
+      - templateName: "pre-mod-app-conf-examp"
         targetTags:
           - tagKey: "${ADWRKSHP_CONTROLLER_HOST}"
             tagValue: "@[ADWRKSHP_CONTROLLER_HOST]"    
