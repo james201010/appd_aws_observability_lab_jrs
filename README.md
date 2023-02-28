@@ -36,7 +36,7 @@ cd modernization_workshop
 
 Set lab user id to at least 5 character name
 ```
-export appd_workshop_user=xxxxx
+export appd_workshop_user=jrshn
 ```
 
 **OPTIONAL:** If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user name and password for a controller login user that has the **'Account Owner'** role assigned.  Then set the variable that points to the 'controller-config.yaml' file like this
