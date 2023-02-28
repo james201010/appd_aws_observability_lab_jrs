@@ -190,7 +190,7 @@ shellTasks:
       - tagKey: "@[ADWRKSHP_HELM_CLUSTER_AGENT_DEPLOYMENT]"
         tagValue: "true"
       - tagKey: "@[ADWRKSHP_CLUSTER_AGENT_NAME_01]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]-eks"
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]-eks"
  
 
   - taskType: "SHELL_TASK_UPDATE_EXTERNAL_FILE"
@@ -203,7 +203,7 @@ shellTasks:
       - tagKey: "@[ADWRKSHP_HELM_CLUSTER_AGENT_DEPLOYMENT]"
         tagValue: "true"
       - tagKey: "@[ADWRKSHP_CLUSTER_AGENT_NAME_01]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]-eks"
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]-eks"
         
 
   - taskType: "SHELL_TASK_EXECUTE_SHELL_SCRIPT"
@@ -527,7 +527,7 @@ controllerTasks:
     taskName: "create-apm-app-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME_PRE]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]"
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"
         
     templateTargets:        
       - templateName: "pre-modernize-app-conf"
@@ -550,7 +550,7 @@ controllerTasks:
     taskName: "create-brum-app-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_EUM_APP_NAME_PRE]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]-web"
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]-web"
       - tagKey: "@[ADWRKSHP_EUM_APP_CONF_UPDATE]"
         tagValue: "true"
       - tagKey: "@[ADWRKSHP_EUM_APP_CONF_SLOWT_TYPE]"
@@ -589,7 +589,7 @@ controllerTasks:
     taskName: "create-apm-app-post"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME_POST]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]"
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]"
 #      - tagKey: "@[ADWRKSHP_APM_APP_TYPE]"
 #        tagValue: "@[ADWRKSHP_APM_APP_TYPE_K8S]"
   
@@ -620,7 +620,7 @@ controllerTasks:
     taskName: "create-brum-app-post"
     inputTags:
       - tagKey: "@[ADWRKSHP_EUM_APP_NAME_POST]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]-web"  
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]-web"  
       - tagKey: "@[ADWRKSHP_EUM_APP_CONF_UPDATE]"
         tagValue: "true"
       - tagKey: "@[ADWRKSHP_EUM_APP_CONF_SLOWT_TYPE]"
@@ -661,9 +661,9 @@ controllerTasks:
     taskName: "adfin-db-collector-post"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]"      
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]"      
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_NAME]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]-mysql"    
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]-mysql"    
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_TYPE]"
         tagValue: "MYSQL"    
       - tagKey: "@[ADWRKSHP_DB_AGENT_NAME]"
@@ -693,9 +693,9 @@ controllerTasks:
     taskName: "adfin-db-collector-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]"      
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"      
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_NAME]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]-mysql"    
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]-mysql"    
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_TYPE]"
         tagValue: "MYSQL"    
       - tagKey: "@[ADWRKSHP_DB_AGENT_NAME]"
@@ -842,7 +842,7 @@ controllerFinalTasks:
     taskName: "create-bt-art-health-rule-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME_PRE]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]"
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"
       - tagKey: "@[ADWRKSHP_HEALTH_RULE_NAME]"
         tagValue: "Transaction Response Health"
       - tagKey: "@[ADWRKSHP_HEALTH_RULE_ART_MILLIS]"
@@ -858,7 +858,7 @@ controllerFinalTasks:
     taskName: "create-nodes-art-health-rule-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME_PRE]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]"
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"
       - tagKey: "@[ADWRKSHP_HEALTH_RULE_NAME]"
         tagValue: "Transaction Response Time"
       - tagKey: "@[ADWRKSHP_HEALTH_RULE_ART_MILLIS]"
@@ -870,7 +870,7 @@ controllerFinalTasks:
     taskName: "ungroup-rename-flowmap-comps-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME_PRE]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]"
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"
         # format for the tagValue for "@[ADWRKSHP_FLOWMAP_COMPONENT]" is
         # componentType (see "Flowmap Components" in com.appdynamics.cloud.modern.ApplicationConstants)
         # componentOrginalName (as original seen on the flowmap),
@@ -918,7 +918,7 @@ controllerFinalTasks:
     taskName: "create-db-to-collector-links-pre"
     inputTags:
       - tagKey: "@[ADWRKSHP_APM_APP_NAME_PRE]"
-        tagValue: "adfin-pre-modernize-@[ADWRKSHP_LABUSER_KEY]"
+        tagValue: "adfin-pre-mod-@[ADWRKSHP_LABUSER_KEY]"
             
             
 cloudTasks:
@@ -930,7 +930,7 @@ cloudTasks:
     taskName: "create-db-aws-rds-mysql"
     inputTags:
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_NAME]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]-mysql"    
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]-mysql"    
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_SIZE]"
         tagValue: "db.t2.small"    
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_TYPE]"
@@ -944,7 +944,7 @@ cloudTasks:
       - tagKey: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"
         tagValue: "@[ADWRKSHP_CLOUD_DB_INST_ENDPOINT]"    
       - tagKey: "@[ADWRKSHP_CLOUD_SECURITY_GROUP_NAME]"
-        tagValue: "adfin-post-modernize-@[ADWRKSHP_LABUSER_KEY]-sg"
+        tagValue: "adfin-post-mod-@[ADWRKSHP_LABUSER_KEY]-sg"
       - tagKey: "@[ADWRKSHP_CLOUD_SEC_GROUP_CIDR_1]"
         tagValue: "localprivip.txt"
       - tagKey: "@[ADWRKSHP_CLOUD_SEC_GROUP_CIDR_2]"
