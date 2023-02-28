@@ -15,7 +15,15 @@ https://appd-modernization.awsworkshop.io/30_workshop_setup/3_attach_iam_role.ht
 https://appd-modernization.awsworkshop.io/30_workshop_setup/4_cloud9_update.html
 
 
-Then use the commands below to finish setting up the pre-modernization version of the lab:
+Then use the commands below to finish setting up the rest of the lab:
+
+Clone the **Development** GitHub repository (**!!! ONLY FOR DEVELOPMENT !!!**):
+
+```
+git clone https://github.com/james201010/appd_aws_observability_lab_jrs.git modernization_workshop
+```
+
+Clone the **Production** GitHub repository:
 
 ```
 git clone https://github.com/Appdynamics/appd_aws_observability_lab.git modernization_workshop
@@ -31,7 +39,7 @@ Set lab user id to at least 5 character name
 export appd_workshop_user=xxxxx
 ```
 
-OPTIONAL: If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user and password for a controller user that has 'Account Owner' role assigned.  Then set the variable that points to the 'controller-config.yaml' file like this
+**OPTIONAL:** If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user name and password for a controller login user that has the **'Account Owner'** role assigned.  Then set the variable that points to the 'controller-config.yaml' file like this
 
 ```
 export appd_controller_details_file_path=./controller-config.yaml

@@ -4,13 +4,12 @@
 #
 # Utility script to initialize the workshop prerequisites on the Cloud9 EC2 instance
 #
-# Before this script is run, the lab user should execute the four commands seen below:
+# Before this script is run, the lab user should execute the three commands seen below:
 #
-# git clone https://github.com/james201010/appd_aws_observability_lab_jrs.git modernization_workshop
+# 
 # git clone https://github.com/Appdynamics/appd_aws_observability_lab.git modernization_workshop
 # 
 # cd modernization_workshop
-# chmod +x setup_workshop.sh
 # export appd_workshop_user=jedi
 #
 # NOTE: All inputs are defined by external environment variables.
