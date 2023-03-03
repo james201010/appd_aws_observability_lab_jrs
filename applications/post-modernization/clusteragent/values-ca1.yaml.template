@@ -37,9 +37,9 @@ infraViz:
   nodeOS: "linux"
   enableMasters: false
   stdoutLogging: true
-  enableContainerHostId: true
+  enableContainerHostId: false
   enableServerViz: true
-  enableDockerViz: true
+  enableDockerViz: false
 
 # Netviz config
 netViz:
