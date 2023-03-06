@@ -19,6 +19,8 @@ Then use the commands below to finish setting up the rest of the lab:
 
 Clone the **Development** GitHub repository (**!!! ONLY FOR DEVELOPMENT !!!**):
 
+'The development repo currently has the new Helm chart deployment of the AppD agents to Kubernetes.'
+
 ```
 git clone https://github.com/james201010/appd_aws_observability_lab_jrs.git modernization_workshop
 ```
@@ -46,7 +48,7 @@ export appd_controller_details_file_path=./controller-config.yaml
 ```
 
 Then run the setup script with the command below which performs the tasks listed in the link below:
-https://appd-modernization.awsworkshop.io/30_workshop_setup/5_start_engines.html#what-the-setup-utility-does
+https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/5_start_engines.html#what-the-setup-utility-does
 Note: The initial setup takes about 24 minutes to complete
 
 ```
