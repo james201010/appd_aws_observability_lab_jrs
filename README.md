@@ -4,15 +4,15 @@ Artifacts for AppDynamics AWS Cloud Modernization lab.
 
 After creating your Cloud9 instance and configuring it by following all the steps included in these web pages:
 
-https://appd-modernization.awsworkshop.io/30_workshop_setup.html
+https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/1_create_cloud9.html
 
-https://appd-modernization.awsworkshop.io/30_workshop_setup/1_create_cloud9.html
+https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/1_create_cloud9.html
 
-https://appd-modernization.awsworkshop.io/30_workshop_setup/2_create_iam_role.html
+https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/2_create_iam_role.html
 
-https://appd-modernization.awsworkshop.io/30_workshop_setup/3_attach_iam_role.html
+https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/3_attach_iam_role.html
 
-https://appd-modernization.awsworkshop.io/30_workshop_setup/4_cloud9_update.html
+https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/4_cloud9_update.html
 
 
 Then use the commands below to finish setting up the rest of the lab:
@@ -25,14 +25,16 @@ Clone the **Development** GitHub repository (**!!! ONLY FOR DEVELOPMENT !!!**):
 git clone https://github.com/james201010/appd_aws_observability_lab_jrs.git modernization_workshop
 ```
 
-Clone the **Production** GitHub repository:
+Clone the **Production** GitHub repository (**!!! DONT USE THIS REPO UNTIL MAR 8th 2023 !!!**):
 
 ```
 git clone https://github.com/Appdynamics/appd_aws_observability_lab.git modernization_workshop
 ```
 
+Change directory to where the repo has been cloned
+
 ```
-cd modernization_workshop
+cd /home/ec2-user/environment/modernization_workshop
 ```
 
 
@@ -41,7 +43,7 @@ Set lab user id to at least 5 character name
 export appd_workshop_user=jrshn
 ```
 
-**OPTIONAL:** If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user name and password for a controller login user that has the **'Account Owner'** role assigned.  Then set the variable that points to the 'controller-config.yaml' file like this
+**OPTIONAL:** If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user name and password for a controller login user that has the **'Account Owner'** role assigned.  Then set the variable that points to the 'controller-config.yaml' file like the example below. (**Do this Before you run setup_workshop.sh**) - (**Only run setup_workshop.sh once**)
 
 ```
 export appd_controller_details_file_path=./controller-config.yaml
