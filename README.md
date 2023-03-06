@@ -1,7 +1,8 @@
 # appd_aws_modernization_lab
 
-Artifacts for AppDynamics AWS Cloud Modernization lab.
+## Artifacts for AppDynamics AWS Cloud Modernization lab.
 
+### Create you Cloud9 instance
 After creating your Cloud9 instance and configuring it by following all the steps included in these web pages:
 
 https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/1_create_cloud9.html
@@ -16,6 +17,8 @@ https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/4_cloud9_update.htm
 
 
 Then use the commands below to finish setting up the rest of the lab:
+
+### Clone the GitHub repository
 
 Clone the **Development** GitHub repository (**!!! ONLY FOR DEVELOPMENT !!!**):
 
@@ -43,12 +46,15 @@ Set lab user id to at least 5 character name
 export appd_workshop_user=jrshn
 ```
 
+### Switching to your own controller
+
 **OPTIONAL:** If you want to target your own controller then edit the '/home/ec2-user/environment/modernization_workshop/controller-config.yaml' file with your controller details and the user name and password for a controller login user that has the **'Account Owner'** role assigned.  Then set the variable that points to the 'controller-config.yaml' file like the example below. (**Do this Before you run setup_workshop.sh**) - (**Only run setup_workshop.sh once**)
 
 ```
 export appd_controller_details_file_path=./controller-config.yaml
 ```
 
+### Workshop setup
 Then run the setup script with the command below which performs the tasks listed in the link below:
 https://povpbmodernize.appdpartnerlabs.net/30_workshop_setup/5_start_engines.html#what-the-setup-utility-does
 Note: The initial setup takes about 24 minutes to complete
