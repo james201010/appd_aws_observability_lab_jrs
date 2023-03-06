@@ -19,7 +19,7 @@ Then use the commands below to finish setting up the rest of the lab:
 
 Clone the **Development** GitHub repository (**!!! ONLY FOR DEVELOPMENT !!!**):
 
-'The development repo currently has the new Helm chart deployment of the AppD agents to Kubernetes.'
+*The development repo currently has the new Helm chart deployment of the AppD agents to Kubernetes.*
 
 ```
 git clone https://github.com/james201010/appd_aws_observability_lab_jrs.git modernization_workshop
